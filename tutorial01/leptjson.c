@@ -2,6 +2,9 @@
 #include <assert.h>  /* assert() */
 #include <stdlib.h>  /* NULL */
 
+//wind_test
+
+
 #define EXPECT(c, ch)       do { assert(*c->json == (ch)); c->json++; } while(0)
 
 typedef struct {

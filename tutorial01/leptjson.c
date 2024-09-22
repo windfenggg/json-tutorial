@@ -21,7 +21,7 @@ static void lept_parse_whitespace(lept_context* c) {
 
 /* true  = "true" */
 static int lept_parse_true(lept_context* c, lept_value* v) {
-    //当前字符应该是 'n'，所以我们使用一个宏 EXPECT(c, ch) 进行断言，并跳到下一字符。
+    //当前字符应该是 't'，所以我们使用一个宏 EXPECT(c, ch) 进行断言，并跳到下一字符。
     EXPECT(c, 't');
     if (c->json[0] != 'r' || c->json[1] != 'u' || c->json[2] != 'e')
         return LEPT_PARSE_INVALID_VALUE;
@@ -32,7 +32,7 @@ static int lept_parse_true(lept_context* c, lept_value* v) {
 
 /* false  = "false" */
 static int lept_parse_false(lept_context* c, lept_value* v) {
-    //当前字符应该是 'n'，所以我们使用一个宏 EXPECT(c, ch) 进行断言，并跳到下一字符。
+    //当前字符应该是 'f'，所以我们使用一个宏 EXPECT(c, ch) 进行断言，并跳到下一字符。
     EXPECT(c, 'f');
     if (c->json[0] != 'a' || c->json[1] != 'l' || c->json[2] != 's' || c->json[3] != 'e')
         return LEPT_PARSE_INVALID_VALUE;
